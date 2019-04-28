@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    {% load staticfiles %}
     <meta charset="UTF-8">
     <title>صفحه اصلی</title>
 </head>
@@ -9,10 +11,11 @@
 <table align="center" dir="rtl" width="100%" height="100%" border="0"><tr height="100 px" align="center" style="background-color:#ffeee7"><td style="font-family: 'Blackadder ITC' ; font-size: 35px" >roubina</td></tr>
 </table>
 <table align="center" width="100%" height="100%" border="0">
+<!-- ezafe kardan file css az in tarigh emkan pazir ast -->
+<link rel="stylesheet" href="{% static 'css/demo.css' %}"/>
 
-
-
-<tr style="font-size:18px ; font-family:'0 Badr', '0 Badr Bold', '0 Baran', '0 Elham'; background-image:url(#)" >
+<!-- baraye address dehi be tag image az in masir mitoni varedesh koni '/static/images/bg.jpg' -->
+<tr style="font-size:18px ; font-family:'0 Badr', '0 Badr Bold', '0 Baran', '0 Elham';background-image: url('/static/images/bg.jpg') " >
 <td align="center" width="90 px"><a href="#"> صفحه اصلی</a></td>
 <td align="center"   width="90 px"><a href="#"> ثبت نام</a></td>
 <td></td>
@@ -21,7 +24,8 @@
 <tr  align="center" style="background-color: rgba(255,255,255,0.07)"><td align="center" colspan="10"> <input type="text"  id="search" name="search" style="background-image:url(img/6.png) ; width:400px ; height:30px " height="106 px" /><br/> <br/> </td></tr>
 
 </table>
-سلام
+<!--  va hamchenin baraye ezafe kardan ye ax az in ravesh ok mikoni  --!>
+<img src="{% static 'images/11.jpg' %}" height="100"/>
 </form>
 </body>
 </html>
