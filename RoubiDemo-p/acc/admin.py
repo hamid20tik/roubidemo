@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import UserMaghaze,UserMoshtari
 
-# Register your models here.
+admin.site.register(UserMaghaze)
+admin.site.register(UserMoshtari)
+
+
+
+

@@ -20,25 +20,35 @@
 <tr  align="center" style="background-color: rgba(255,255,255,0.07)"><td align="center" colspan="10"> <input type="text"  id="search" name="search" style="background-image:url(img/6.png) ; width:400px ; height:30px " height="106 px" /><br/> <br/> </td></tr>
 
 </table>
-<table>
 
-<div style="background-color:#FDFDFD">
+    {{error}}
+    <br/>
+    <br/>
+
+<table>
+<form method="POST" action="{% url 'usersignup' %}" >
+    {% csrf_token %}
+    <div style="background-color:#FDFDFD">
 </br>
 <table align="center" style="background-color:#FFFFFF ; font-size:24px ">
 
-<tr><td>نام و نام خانوادگی :</td><td ><input type="text"  id="NAME" name="IDname"  style="width:200px ; height:25px"  /> </td></tr>
+<tr><td>نام کاربری :</td><td ><input type="text"  name="username"  style="width:200px ; height:25px"  /> </td></tr>
 
-<tr><td>کد ملی :</td><td><input type="text"  id="IDNUM" name="IDname" style="width:200px ; height:25px"  /></td></tr>
-<tr><td>ایمیل :</td><td><input type="text"  id="Email" name="IDname" style="width:200px ; height:25px" /></td></tr>
-<tr><td>پسوورد :</td><td><input type="text"  id="PASS" name="IDname" style="width:200px ; height:25px" /></td></tr>
-<tr><td>تکرار پسوورد :</td><td><input type="text"  id="CPASS" name="IDname" style="width:200px ; height:25px" /></td></tr>
-<tr><td>آدرس منزل :</td><td><input type="text"  id="ADDRESS" name="IDname" style="width:200px ; height:25px" /></td></tr>
-<tr><td>کد پستی :</td><td><input type="text"  id="IDCOD" name="IDname"style="width:200px ; height:25px"  /></td></tr>
-<tr><td> شماره تماس :</td><td><input type="text"  id="TELL" name="IDname" style="width:200px ; height:25px"  /></td></tr>
+<!--<tr><td>کد ملی :</td><td><input type="text"  name="username" style="width:200px ; height:25px"  /></td></tr>-->
+<tr><td>ایمیل :</td><td><input type="text" name="email" style="width:200px ; height:25px" /></td></tr>
+<tr><td>پسوورد :</td><td><input type="password" name="password1" style="width:200px ; height:25px" /></td></tr>
+<tr><td>تکرار پسوورد :</td><td><input type="password"   name="password2" style="width:200px ; height:25px" /></td></tr>
+<!-- <tr><td>آدرس منزل :</td><td><input type="text"  id="ADDRESS" name="IDname" style="width:200px ; height:25px" /></td></tr> -->
+<!-- <tr><td>کد پستی :</td><td><input type="text"  id="IDCOD" name="IDname"style="width:200px ; height:25px"  /></td></tr> -->
+
+<tr><td> شماره همراه :</td><td><input type="text" name="phonenumber" style="width:200px ; height:25px"  /></td></tr>
+<tr><td> <input class = "btn " type="submit" value="ثبت نام"/></td></tr>
 
 </table>
 
-</div>
+    </div>
+</form>
+
 
 </table>
 </form>
