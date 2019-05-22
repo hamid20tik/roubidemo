@@ -15,11 +15,11 @@ def usersignup(request):
                 user = User.objects.create_user(request.POST['username'],password=request.POST['password1'],email=request.POST['email'],)
                 ###UserMoshtari.phone_number=request.POST['phonenumber']
                 auth.login(request,user)
-                return render(request,'acc/register.html',{'error':'تبت نام با موفقیت انجام شد'})
+                return render(request,'acc/register.html',{'error':'ثبت نام با موفقیت انجام شد'})
 
 
         else:
-            return render(request, 'acc/register.html', {'error': 'لطفا پسور شبیه به هم وارد کنید'})
+            return render(request, 'acc/register.html', {'error': 'لطفا پسورد شبیه به هم وارد کنید'})
     else:
         return render(request, 'acc/register.html')
 
